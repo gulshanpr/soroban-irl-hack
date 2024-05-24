@@ -1,0 +1,29 @@
+<div class="event-container">
+    <div class="image-container">
+        <img src="/images/elections.jpg" alt="About Us Image">
+    </div>
+    <div class="text-container">
+        <h2>India Funds </h2>
+        <p>India Funds is a platform made with love for donating funds for elections. Without any hesistation share the issues you are facing in the community, you will be getting you deserved support for sure.</p>
+        <p>People can donate their desired amount to their favorite national parties.</p>
+        
+    </div>
+    <div class="latest-events">
+    <ul class="event-ul">
+        <% data.forEach(event => { %>
+         
+        
+        <li>
+            <a href="/event/<%= event._id %>" >
+                <span><%= event.title %></span>
+                <span class="event-list__date"><%= event.happenedAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+
+
+
+
+    </ul>
+</div>
+</div>
